@@ -1,0 +1,30 @@
+# Ambiente Virtual
+.venv/
+venv/
+ENV/
+env/
+
+# Python / Cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Logs e Dados de Treinamento / Exe (YOLO / Ultralytics)
+runs/
+*.pt
+*.onnx
+*.engine
+
+# Datasets / Downloads temporários
+*.zip
+*.tar.gz
+dataset/
+dataset_yolo/
+
+# Arquivos do Sistema Operacional e IDEs
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

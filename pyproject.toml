@@ -1,0 +1,36 @@
+[tool.ruff]
+# Comprimento máximo de linha recomendado pela PEP 8 / Black
+line-length = 88
+# Versão alvo do Python no seu ambiente
+target-version = "py314"
+
+[tool.ruff.lint]
+# Seleção de regras ativas:
+# E/W = Erros e Avisos de sintaxe/estilo (Pycodestyle)
+# F   = Erros de execução e variáveis não usadas (Pyflakes)
+# I   = Importações desordenadas (Isort)
+# Q   = Checagem de aspas simples vs duplas (Flake8-quotes)
+# UP  = Modernização de código para versão do Python (Pyupgrade)
+# B   = Boas práticas e prevenção de bugs (Flake8-bugbear)
+# SIM = Simplificação de código redundante (Flake8-simplify)
+select = ["E", "W", "F", "I", "Q", "UP", "B", "SIM"]
+
+# Regras a ignorar (se necessário no futuro)
+ignore = []
+
+# Configuração do Linter para exigir aspas simples
+[tool.ruff.lint.flake8-quotes]
+inline-quotes = "single"
+docstring-quotes = "double"
+multiline-quotes = "double"
+
+# Configuração do Formatter automático
+[tool.ruff.format]
+quote-style = "single"
+indent-style = "space"
+skip-magic-trailing-comma = false
+docstring-code-format = true
+
+[tool.pytest.ini_options]
+pythonpath = "."
+testpaths = ["tests"]
